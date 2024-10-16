@@ -4,7 +4,7 @@ import pypolarshift as pp
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
-    data = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform= torchvision.transforms.ToTensor())
+    data = torchvision.datasets.MNIST(root='../data', train=True, download=True, transform= torchvision.transforms.ToTensor())
     image = data[0][0].squeeze().numpy()
     # get log-polar mapping    
     polar_map = pp.mapping.cartesian_to_polar(image, scaling='log')
